@@ -1,0 +1,1 @@
+print("VisionMate AI Starting...")

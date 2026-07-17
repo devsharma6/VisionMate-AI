@@ -48,6 +48,10 @@ while True:
         center_x = (x1 + x2) / 2
 
         direction = get_direction(center_x, frame.shape[1])
+        if object_name == "person":
+            print("VOICE FUNCTION CALLED")
+        voice.speak(f"Person on your {direction}")
+
         voice_manager.speak(f"{object_name} on your {direction}")
 
         print(f"{object_name} --> {direction}")

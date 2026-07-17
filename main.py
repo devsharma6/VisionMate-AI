@@ -1,3 +1,4 @@
+from AI.voice.voice_manager import VoiceManager
 from AI.object_detection.camera import Camera
 from AI.object_detection.detector import Detector
 from AI.object_detection.direction import get_direction
@@ -6,6 +7,7 @@ import cv2
 
 camera = Camera()
 detector = Detector()
+voice = VoiceManager()
 
 print("🚀 VisionMate AI Started Successfully!")
 
@@ -32,8 +34,14 @@ while True:
 
         direction = get_direction(center_x, frame.shape[1])
 
-        print(f"{object_name} --> {direction}")
-
+        print(f"Frame Width: {frame.shape[1]}")
+        print(f"Center X: {center_x}")
+        print(f"Direction: {direction}")
+        print("-" * 30)
+        if object_name == "person":
+            message = f"Warning. Person on your {direction}"
+            print("VOICE MESSAGE:", message)
+            voice.speak(message)
         cv2.putText(
             annotated_frame,
             direction,

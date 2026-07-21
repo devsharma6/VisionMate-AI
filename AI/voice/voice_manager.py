@@ -1,17 +1,26 @@
 import asyncio
 import edge_tts
-import os
 import threading
+import queue
+import os
 from playsound import playsound
 
 
 class VoiceManager:
 
     def __init__(self):
+
+        self.queue = queue.Queue()
         self.last_message = ""
-        self.is_speaking = False
+
+        worker = threading.Thread(
+            target=self._worker,
+            daemon=True
+        )
+        worker.start()
 
     async def _generate_voice(self, text):
+
         communicate = edge_tts.Communicate(
             text=text,
             voice="en-US-GuyNeural"
@@ -19,32 +28,37 @@ class VoiceManager:
 
         await communicate.save("voice.mp3")
 
-    def _speak_thread(self, message):
+    def _worker(self):
 
-        self.is_speaking = True
+        while True:
 
-        asyncio.run(self._generate_voice(message))
+            message = self.queue.get()
 
-        playsound("voice.mp3")
+            try:
 
-        if os.path.exists("voice.mp3"):
-            os.remove("voice.mp3")
+                asyncio.run(
+                    self._generate_voice(message)
+                )
 
-        self.last_message = message
-        self.is_speaking = False
+                playsound("voice.mp3")
+
+                if os.path.exists("voice.mp3"):
+                    os.remove("voice.mp3")
+
+                self.last_message = message
+
+            except Exception as e:
+                print("Voice Error:", e)
+
+            self.queue.task_done()
 
     def speak(self, message):
 
-        if self.is_speaking:
+        if not message:
             return
 
         if message == self.last_message:
             return
 
-        print("🔊", message)
-
-        threading.Thread(
-            target=self._speak_thread,
-            args=(message,),
-            daemon=True
-        ).start()
+        if self.queue.empty():
+            self.queue.put(message)

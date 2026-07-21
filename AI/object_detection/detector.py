@@ -3,7 +3,8 @@ import os
 
 model_path = os.path.join(
     os.path.dirname(__file__),
-    "../../yolov8n.pt"
+    "../../models/yolov8n.pt"
+)
 )
 
 class Detector:

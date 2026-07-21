@@ -1,8 +1,10 @@
 # 🦮 VisionMate AI
 
-> An AI-powered assistive system designed to help visually impaired people navigate safely using Computer Vision, OCR, and Voice Guidance.
+> AI-powered assistive system for visually impaired users using Computer Vision, OCR, and Voice Guidance.
 
----
+<p align="center">
+  <img src="assets/screenshots/visionmate-overview.png" alt="VisionMate AI Overview" width="100%">
+</p>
 
 ## 🚀 Features
 
@@ -98,7 +100,13 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+## 📸 Screenshots
 
+### VisionMate AI Overview
+
+<p align="center">
+  <img src="assets/screenshots/visionmate-overview.png" alt="VisionMate AI Demo" width="100%">
+</p>
 ---
 
 ## 🎯 Current Features

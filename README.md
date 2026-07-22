@@ -1,11 +1,7 @@
 # 🦮 VisionMate AI
 
 > AI-powered assistive system for visually impaired users using Computer Vision, OCR, and Voice Guidance.
-
-<p align="center">
-  <img src="assets/screenshots/visionmate-overview.png" alt="VisionMate AI Overview" width="100%">
-</p>
-
+visionmate-overview.png
 ## 🚀 Features
 
 - 🎯 Real-time Object Detection (YOLOv8)

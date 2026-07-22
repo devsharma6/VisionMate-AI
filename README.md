@@ -2,7 +2,8 @@
 
 > AI-powered assistive system for visually impaired users using Computer Vision, OCR, and Voice Guidance.
 
-![Uploading visionmate-overview.png.png…]()
+<img width="1536" height="1024" alt="visionmate-overview png" src="https://github.com/user-attachments/assets/22a1367e-ba0e-44f6-8e7b-c400731399d8" />
+
 
 ## 🚀 Features
 

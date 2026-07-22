@@ -2,9 +2,8 @@
 
 > AI-powered assistive system for visually impaired users using Computer Vision, OCR, and Voice Guidance.
 
-<p align="center">
-  <img src="assets/screenshots/visionmate_overview.png" alt="VisionMate AI Overview" width="100%">
-</p>
+![Uploading visionmate-overview.png.png…]()
+
 ## 🚀 Features
 
 - 🎯 Real-time Object Detection (YOLOv8)

@@ -1,7 +1,8 @@
 # 🦮 VisionMate AI
 
 > AI-powered assistive system for visually impaired users using Computer Vision, OCR, and Voice Guidance.
-> <p align="center">
+
+<p align="center">
   <img src="assets/screenshots/visionmate-overview.png" alt="VisionMate AI Overview" width="100%">
 </p>
 ## 🚀 Features
@@ -102,9 +103,6 @@ python main.py
 
 ### VisionMate AI Overview
 
-<p align="center">
-  <img src="assets/screenshots/visionmate-overview.png" alt="VisionMate AI Demo" width="100%">
-</p>
 ---
 
 ## 🎯 Current Features
@@ -153,3 +151,8 @@ https://github.com/devsharma6
 ## ⭐ Support
 
 If you like this project, consider giving it a ⭐ on GitHub.
+
+
+<p align="center">
+  <img src="assets/screenshots/visionmate-overview.png" alt="VisionMate AI Overview" width="100%">
+</p>
